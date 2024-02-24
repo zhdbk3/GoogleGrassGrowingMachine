@@ -31,7 +31,7 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.11' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-          architecture: ${ matrix.architecture } # optional x64 or x86. Defaults to x64 if not specified
+          architecture: ${{ matrix.architecture }} # optional x64 or x86. Defaults to x64 if not specified
           cache: 'pip'
           cache-dependency-path: |
             **/requirements*.txt
@@ -50,18 +50,18 @@ jobs:
           disable-plugins: options-nanny
           include-data-files: img/*=img/*
           output-file: GoogleGrassGrowingMachine
-          disable-console: ${ github.event.inputs.disable_console }
+          disable-console: ${{ github.event.inputs.disable_console }}
           company-name: 谷歌生草机开发组
           product-name: 谷歌生草机
           file-version: ${{ github.event.inputs.version }}
           product-version: ${{ github.event.inputs.version }}
           file-description: 谷歌生草机
           copyright: "Copyright 谷歌生草机开发组. All right reserved."
-          macos-create-app-bundle: ${ github.event.inputs.disable_console }
+          macos-create-app-bundle: ${{ github.event.inputs.disable_console }}
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: GoogleGrassGrowingMachine-v${{ github.event.inputs.version_str }}-${{ runner.os }}-${ matrix.architecture }
+          name: GoogleGrassGrowingMachine-v${{ github.event.inputs.version_str }}-${{ runner.os }}-${{ matrix.architecture }}
           path: |
             build/main.dist/*
