@@ -1,0 +1,9 @@
+PyQt5
+PyQt-Fluent-Widgets
+google_trans_new
+gtts
+pyperclip
+requests
+beautifulsoup4
+lxml
+PyPDF2
