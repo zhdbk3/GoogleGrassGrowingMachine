@@ -50,7 +50,7 @@ jobs:
           standalone: true
           enable-plugins: pyqt5
           disable-plugins: options-nanny
-          include-data-files: img/*=img/*
+          include-data-dir: img=img
           output-file: GoogleGrassGrowingMachine
           disable-console: ${{ github.event.inputs.disable_console }}
           company-name: 谷歌生草机开发组
