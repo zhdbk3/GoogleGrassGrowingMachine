@@ -3,8 +3,8 @@ name: 打包谷歌生草机
 on:
   workflow_dispatch:
     inputs:
-      version:
-        description: '版本'
+      version_tuple:
+        description: '版本元组'
         required: true
       version_str:
         description: '版本字符串'
@@ -20,8 +20,6 @@ jobs:
       fail-fast: false
       matrix:
         os: [ macos-latest, ubuntu-latest, windows-latest ]
-        architecture: [ 'x64', 'x86' ]
-
 
     runs-on: ${{ matrix.os }}
 
@@ -33,7 +31,7 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.11' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-          architecture: ${{ matrix.architecture }} # optional x64 or x86. Defaults to x64 if not specified
+          architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
           cache: 'pip'
           cache-dependency-path: |
             **/requirements*.txt
@@ -41,6 +39,7 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install -r requirements.txt
+          pip install imageio
 
       - name: Build Executable
         uses: Nuitka/Nuitka-Action@main
@@ -48,22 +47,24 @@ jobs:
           nuitka-version: main
           script-name: main.py
           standalone: true
-          enable-plugins: pyqt5
-          disable-plugins: options-nanny
-          include-data-dir: img=img
+          enable-plugins: pyside6
+          # disable-plugins: options-nanny
           output-file: GoogleGrassGrowingMachine
           disable-console: ${{ github.event.inputs.disable_console }}
           company-name: 谷歌生草机开发组
           product-name: 谷歌生草机
-          file-version: ${{ github.event.inputs.version }}
-          product-version: ${{ github.event.inputs.version }}
+          file-version: ${{ github.event.inputs.version_tuple }}
+          product-version: ${{ github.event.inputs.version_tuple }}
           file-description: 谷歌生草机
           copyright: "Copyright 谷歌生草机开发组. All right reserved."
+          windows-icon-from-ico: img/icon.ico
           macos-create-app-bundle: ${{ github.event.inputs.disable_console }}
+          macos-app-icon: img/icon.ico
+          linux-icon: img/icon.ico
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: GoogleGrassGrowingMachine-v${{ github.event.inputs.version_str }}-${{ runner.os }}-${{ matrix.architecture }}
+          name: GoogleGrassGrowingMachine-v${{ github.event.inputs.version_str }}-${{ runner.os }}
           path: |
             build/main.dist/*
