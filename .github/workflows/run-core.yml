@@ -24,15 +24,9 @@ on:
       sn:
         description: 使用逐句翻译
         default: false
-      p:
-        description: 代理，应输入字典，用引号括住
-        default: None
       l:
         description: 使用的语言，默认为ALL，联合国六大语言为UN6
         default: ALL
-      c:
-        description: 自定义cookies
-        default: None
       m:
         description: 最大线程数量
         default: 100
@@ -63,7 +57,7 @@ jobs:
 
       - name: 生草
         run: |
-          python src/core/gggm_core.py -r ${{ github.event.inputs.r }} -o ${{ github.event.inputs.o }} -u ${{ github.event.inputs.u }} -ts ${{ github.event.inputs.ts }} -to ${{ github.event.inputs.to }} -rt ${{ github.event.inputs.rt }} ${{ (github.event.inputs.sn == true) && '-sn' || '' }} -p ${{ github.event.inputs.p }} -l ${{ github.event.inputs.l }} -c ${{ github.event.inputs.c }} -m ${{ github.event.inputs.m }} -sp ${{ github.event.inputs.sp }}
+          python src/core/gggm_core.py -r ${{ github.event.inputs.r }} -o ${{ github.event.inputs.o }} -u ${{ github.event.inputs.u }} -ts ${{ github.event.inputs.ts }} -to ${{ github.event.inputs.to }} -rt ${{ github.event.inputs.rt }} ${{ (github.event.inputs.sn == true) && '-sn' || '' }} -l ${{ github.event.inputs.l }} -m ${{ github.event.inputs.m }} -sp ${{ github.event.inputs.sp }}
 
       - name: 上传工件
         uses: actions/upload-artifact@v3
