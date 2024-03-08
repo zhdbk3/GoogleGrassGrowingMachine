@@ -57,6 +57,6 @@ jobs:
       - name: 上传工件
         uses: actions/upload-artifact@v3
         with:
-          name: GoogleGrassGrowingMachine-v${{ github.event.inputs.version_str }}-${{ runner.os }}
+          name: GoogleGrassGrowingMachine-core-v${{ github.event.inputs.version_str }}-${{ runner.os }}
           path: |
             build/gggm_core.dist/*
