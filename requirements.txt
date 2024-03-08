@@ -1,0 +1,5 @@
+PySide6-Fluent-Widgets
+google_trans_new
+requests
+pyperclip
+tqdm

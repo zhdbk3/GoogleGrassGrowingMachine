@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Web</class>
+ <widget class="QWidget" name="Web">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="3" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>509</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0">
+    <widget class="PushButton" name="PushButton_get_text">
+     <property name="text">
+      <string>提取文本</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="2">
+      <widget class="PushButton" name="PushButton_choose_file">
+       <property name="text">
+        <string>浏览</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="LineEdit" name="LineEdit_url_or_html"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="ComboBox" name="ComboBox_where"/>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0">
+    <widget class="PushButton" name="PushButton_make_html">
+     <property name="text">
+      <string>生成网页</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ComboBox</class>
+   <extends>QPushButton</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>PushButton</class>
+   <extends>QPushButton</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>LineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

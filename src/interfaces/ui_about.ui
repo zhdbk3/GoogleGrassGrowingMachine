@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>About</class>
+ <widget class="QWidget" name="About">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_8">
+   <item row="4" column="0" colspan="2">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="ElevatedCardWidget" name="ElevatedCardWidget_supporters">
+     <layout class="QGridLayout" name="gridLayout_7">
+      <item row="1" column="0">
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="5">
+           <widget class="HyperlinkButton" name="HyperlinkButton_thun888">
+            <property name="text">
+             <string>bilibili</string>
+            </property>
+            <property name="url">
+             <url>
+              <string>https://space.bilibili.com/451090261</string>
+             </url>
+            </property>
+            <property name="hasIcon" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="HyperlinkButton" name="HyperlinkButton_statistics">
+            <property name="text">
+             <string>使用统计</string>
+            </property>
+            <property name="url">
+             <url>
+              <string>http://gt-stats.757678.xyz/</string>
+             </url>
+            </property>
+            <property name="hasIcon" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="BodyLabel" name="BodyLabel_3">
+            <property name="text">
+             <string>thun888</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="AvatarWidget" name="AvatarWidget_thun888">
+            <property name="radius">
+             <number>20</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="2">
+           <widget class="BodyLabel" name="BodyLabel_4">
+            <property name="text">
+             <string>提供镜像网站</string>
+            </property>
+            <property name="lightColor" stdset="0">
+             <color>
+              <red>128</red>
+              <green>128</green>
+              <blue>128</blue>
+             </color>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0">
+       <widget class="StrongBodyLabel" name="StrongBodyLabel_2">
+        <property name="text">
+         <string>支持者</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="ElevatedCardWidget" name="ElevatedCardWidget">
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="1" column="0">
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="1" column="0">
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="3">
+           <widget class="HyperlinkButton" name="HyperlinkButton_xdedan">
+            <property name="text">
+             <string>bilibili</string>
+            </property>
+            <property name="url">
+             <url>
+              <string>https://space.bilibili.com/668182235</string>
+             </url>
+            </property>
+            <property name="hasIcon" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="0">
+           <widget class="AvatarWidget" name="AvatarWidget_xdedan">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="radius">
+             <number>20</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="BodyLabel" name="BodyLabel_2">
+            <property name="text">
+             <string>薛定谔的按钮</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="3">
+           <widget class="HyperlinkButton" name="HyperlinkButton_mczhdbk">
+            <property name="text">
+             <string>bilibili</string>
+            </property>
+            <property name="url">
+             <url>
+              <string>https://space.bilibili.com/551409211</string>
+             </url>
+            </property>
+            <property name="hasIcon" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="0">
+           <widget class="AvatarWidget" name="AvatarWidget_mczhdbk">
+            <property name="radius">
+             <number>20</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="BodyLabel" name="BodyLabel">
+            <property name="text">
+             <string>MC着火的冰块</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0">
+       <widget class="StrongBodyLabel" name="StrongBodyLabel">
+        <property name="text">
+         <string>谷歌生草机开发者</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="HyperlinkButton" name="HyperlinkButton_github">
+     <property name="text">
+      <string>github仓库</string>
+     </property>
+     <property name="url">
+      <url>
+       <string>https://github.com/zhdbk3/GoogleGrassGrowingMachine</string>
+      </url>
+     </property>
+     <property name="hasIcon" stdset="0">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>HyperlinkButton</class>
+   <extends>PushButton</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>PushButton</class>
+   <extends>QPushButton</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>CardWidget</class>
+   <extends>QFrame</extends>
+   <header>qfluentwidgets</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ElevatedCardWidget</class>
+   <extends>SimpleCardWidget</extends>
+   <header>qfluentwidgets</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SimpleCardWidget</class>
+   <extends>CardWidget</extends>
+   <header>qfluentwidgets</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>BodyLabel</class>
+   <extends>QLabel</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>StrongBodyLabel</class>
+   <extends>QLabel</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>ImageLabel</class>
+   <extends>QLabel</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>AvatarWidget</class>
+   <extends>ImageLabel</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
