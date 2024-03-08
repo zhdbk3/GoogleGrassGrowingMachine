@@ -34,6 +34,7 @@ jobs:
       - name: 安装依赖项
         run: |
           pip install -r src/core/requirements-core.txt
+          pip install imageio
 
       - name: 构建可执行文件
         uses: Nuitka/Nuitka-Action@main
@@ -50,9 +51,9 @@ jobs:
           product-version: ${{ github.event.inputs.version_tuple }}
           file-description: 谷歌生草机
           copyright: "Copyright 谷歌生草机开发组. All right reserved."
-          windows-icon-from-ico: img/icon.ico
-          macos-app-icon: img/icon.ico
-          linux-icon: img/icon.ico
+          windows-icon-from-ico: src/img/icon.ico
+          macos-app-icon: src/img/icon.ico
+          linux-icon: src/img/icon.ico
 
       - name: 上传工件
         uses: actions/upload-artifact@v3

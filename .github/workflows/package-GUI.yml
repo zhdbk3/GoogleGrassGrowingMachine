@@ -57,10 +57,10 @@ jobs:
           product-version: ${{ github.event.inputs.version_tuple }}
           file-description: 谷歌生草机
           copyright: "Copyright 谷歌生草机开发组. All right reserved."
-          windows-icon-from-ico: img/icon.ico
+          windows-icon-from-ico: src/img/icon.ico
           macos-create-app-bundle: ${{ github.event.inputs.disable_console }}
-          macos-app-icon: img/icon.ico
-          linux-icon: img/icon.ico
+          macos-app-icon: src/img/icon.ico
+          linux-icon: src/img/icon.ico
 
       - name: 上传工件
         uses: actions/upload-artifact@v3
