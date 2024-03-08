@@ -4,6 +4,8 @@ import random
 import time
 import logging
 import os
+import sys
+import io
 
 from tqdm import tqdm
 
@@ -17,7 +19,10 @@ else:
     from .gtn_modified import GoogleTranslator
     from .hint import TypedNamespace
     from .languages import *
+
+# 字符编码
 os.system('chcp 65001')
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
 
 # 全局变量
 current_text_list: list[str] = []
