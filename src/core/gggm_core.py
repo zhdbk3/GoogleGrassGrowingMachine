@@ -3,6 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 import random
 import time
 import logging
+import os
 
 from tqdm import tqdm
 
@@ -16,6 +17,7 @@ else:
     from .gtn_modified import GoogleTranslator
     from .hint import TypedNamespace
     from .languages import *
+os.system('chcp 65001')
 
 # 全局变量
 current_text_list: list[str] = []
@@ -94,7 +96,7 @@ def main(args: TypedNamespace):
     # 初始化
     init()
     # 必须用英文输出，不然github actions解码不了
-    # print('Arguments:', args)
+    print('Arguments:', args)
 
     # 读取文本
     with open(args.read, encoding='utf-8') as f:
@@ -103,7 +105,7 @@ def main(args: TypedNamespace):
     # 分割文本
     text_list = [text] if not args.sentences else str_utils.split_with_keeping_separators(text, args.separator)
     max_progress = len(text_list) * args.times  # 进度最大值，即完成时的进度值
-    # print('Text list:', text_list)
+    print('Text list:', text_list)
     print(f'There are {len(text_list)} sentences in all. It will request for {max_progress} times.')
 
     # 线程池
