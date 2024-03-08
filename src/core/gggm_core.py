@@ -93,7 +93,8 @@ def main(args: TypedNamespace):
     global current_text_list
     # 初始化
     init()
-    print('参数：', args)
+    # 必须用英文输出，不然github actions解码不了
+    print('Arguments:', args)
 
     # 读取文本
     with open(args.read, encoding='utf-8') as f:
@@ -102,8 +103,8 @@ def main(args: TypedNamespace):
     # 分割文本
     text_list = [text] if not args.sentences else str_utils.split_with_keeping_separators(text, args.separator)
     max_progress = len(text_list) * args.times  # 进度最大值，即完成时的进度值
-    print('文本列表：', text_list)
-    print(f'共{len(text_list)}句，预计请求{max_progress}次')
+    print('Text list:', text_list)
+    print(f'There are {len(text_list)} sentences in all, it will request for {max_progress} times.')
 
     # 线程池
     with ThreadPoolExecutor(max_workers=args.max_thread_cnt) as pool:
@@ -114,7 +115,7 @@ def main(args: TypedNamespace):
             pool.submit(ThreadTranslateOne(i, args))
 
         # 持续输出
-        with tqdm(total=max_progress, desc="生草中") as pbar:
+        with tqdm(total=max_progress, desc="Growing grass") as pbar:
             while True:
                 # 输出结果
                 with open(f'{args.output}.txt', mode='w', encoding='utf-8') as f:
@@ -124,7 +125,7 @@ def main(args: TypedNamespace):
                 pbar.update(total_progress - pbar.n)
                 # 检测完成
                 if pbar.n == max_progress:
-                    pbar.write("生草完成")
+                    pbar.write("Finished growing grass.")
                     break
 
                 # 检查报错
