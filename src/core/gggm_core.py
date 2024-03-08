@@ -122,7 +122,7 @@ def main(args: TypedNamespace):
             pool.submit(ThreadTranslateOne(i, args))
 
         # 持续输出
-        with tqdm(total=max_progress, desc="生草中") as pbar:
+        with tqdm(total=max_progress, desc="Growing grass") as pbar:
             while True:
                 # 输出结果
                 with open(f'{args.output}.txt', mode='w', encoding='utf-8') as f:
