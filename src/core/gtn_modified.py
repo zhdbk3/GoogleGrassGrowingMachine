@@ -6,7 +6,7 @@ from google_trans_new import google_translator, LANGUAGES
 from google_trans_new.google_trans_new import google_new_transError
 import requests
 
-DEBUG_WITHOUT_TRANSLATING = True
+DEBUG_WITHOUT_TRANSLATING = False
 
 
 class IPCheckError(BaseException):

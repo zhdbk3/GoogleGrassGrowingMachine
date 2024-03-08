@@ -94,7 +94,7 @@ def main(args: TypedNamespace):
     # 初始化
     init()
     # 必须用英文输出，不然github actions解码不了
-    print('Arguments:', args)
+    # print('Arguments:', args)
 
     # 读取文本
     with open(args.read, encoding='utf-8') as f:
