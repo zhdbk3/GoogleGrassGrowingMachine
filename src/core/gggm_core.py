@@ -72,7 +72,7 @@ class ThreadTranslateOne:
             text = current_text_list[self.idx]  # 从全局变量中获取自己的文本
             if i == 0:  # 第一次自动检测源语言
                 src = 'auto'
-            tgt = random.choice(self.args.languages)  # 随机目标语言
+            tgt = random.choice(self.args.languages) if i != self.args.times - 1 else 'zh-cn'  # 随机目标语言
             text = self.keep_retrying(text, src, tgt)  # 翻译
             current_text_list[self.idx] = text  # 写入全局列表
             total_progress += 1  # 总进度+1（经测试，这一操作在Python3.11中是安全的）
@@ -103,8 +103,8 @@ def main(args: TypedNamespace):
     # 分割文本
     text_list = [text] if not args.sentences else str_utils.split_with_keeping_separators(text, args.separator)
     max_progress = len(text_list) * args.times  # 进度最大值，即完成时的进度值
-    print('Text list:', text_list)
-    print(f'There are {len(text_list)} sentences in all, it will request for {max_progress} times.')
+    # print('Text list:', text_list)
+    print(f'There are {len(text_list)} sentences in all. It will request for {max_progress} times.')
 
     # 线程池
     with ThreadPoolExecutor(max_workers=args.max_thread_cnt) as pool:
