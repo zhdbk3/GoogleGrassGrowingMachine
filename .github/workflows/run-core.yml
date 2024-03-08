@@ -20,6 +20,7 @@ on:
         default: 5
       rt:
         description: 自动重试次数
+        default: 5
       sn:
         description: 使用逐句翻译
         default: false
