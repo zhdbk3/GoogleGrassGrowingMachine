@@ -84,7 +84,7 @@ class ThreadDownloadMp3(QThread):
         self.path = None
 
     def run(self):
-        text = '\n'.join(self.ui.text_list)
+        text = '\n'.join(self.ui.translated_text_list)
         tts = gTTS(text, lang='zh-cn')
         try:
             tts.save(self.path)
