@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormIpCheck</class>
+ <widget class="QWidget" name="FormIpCheck">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_4">
+   <item row="3" column="0">
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="1">
+      <widget class="IndeterminateProgressBar" name="indeterminateProgressBar_run"/>
+     </item>
+     <item row="0" column="2">
+      <widget class="CheckBox" name="checkBox_IPv6">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>IPv6</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="CheckBox" name="checkBox_s">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>扫描模式</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="PrimaryPushButton" name="primaryPushButton_run">
+       <property name="text">
+        <string>运行</string>
+       </property>
+       <property name="hasIcon" stdset="0">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="HyperlinkLabel" name="HyperlinkLabel">
+       <property name="text">
+        <string>https://github.com/Ponderfly/GoogleTranslateIpCheck</string>
+       </property>
+       <property name="url">
+        <url>
+         <string>https://github.com/Ponderfly/GoogleTranslateIpCheck</string>
+        </url>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="BodyLabel" name="BodyLabel">
+       <property name="text">
+        <string>MIT license</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="4" column="0">
+    <widget class="PlainTextEdit" name="plainTextEdit_output">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="1">
+      <widget class="ProgressBar" name="progressBar_download"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="PushButton" name="pushButton_download">
+       <property name="text">
+        <string>下载</string>
+       </property>
+       <property name="hasIcon" stdset="0">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="CheckBox" name="checkBox_moeyy">
+       <property name="text">
+        <string>moeyy加速</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0">
+    <widget class="TitleLabel" name="TitleLabel">
+     <property name="text">
+      <string>GoogleTranslateIpCheck</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CheckBox</class>
+   <extends>QCheckBox</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>PushButton</class>
+   <extends>QPushButton</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>PrimaryPushButton</class>
+   <extends>PushButton</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>BodyLabel</class>
+   <extends>QLabel</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>TitleLabel</class>
+   <extends>QLabel</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>HyperlinkLabel</class>
+   <extends>QPushButton</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>ProgressBar</class>
+   <extends>QProgressBar</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>IndeterminateProgressBar</class>
+   <extends>QProgressBar</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>PlainTextEdit</class>
+   <extends>QPlainTextEdit</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Translate</class>
- <widget class="QWidget" name="Translate">
+ <class>FormTranslate</class>
+ <widget class="QWidget" name="FormTranslate">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,20 +13,13 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_9">
-   <item row="4" column="0">
-    <widget class="PlainTextEdit" name="PlainTextEdit_output">
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="0">
-    <layout class="QGridLayout" name="gridLayout_8">
+  <layout class="QGridLayout" name="gridLayout_6">
+   <item row="2" column="0">
+    <layout class="QGridLayout" name="gridLayout_2">
      <item row="0" column="0">
-      <widget class="PushButton" name="PushButton_ctrl_c">
+      <widget class="PrimaryPushButton" name="primaryPushButton_start">
        <property name="text">
-        <string>一键复制</string>
+        <string>开始生草</string>
        </property>
        <property name="hasIcon" stdset="0">
         <bool>true</bool>
@@ -34,7 +27,41 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="PushButton" name="PushButton_download_mp3">
+      <widget class="ProgressBar" name="progressBar"/>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0">
+    <widget class="BodyLabel" name="bodyLabel_lang">
+     <property name="text">
+      <string>- -&gt; -</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="PushButton" name="pushButton_all">
+       <property name="text">
+        <string>连续文本</string>
+       </property>
+       <property name="hasIcon" stdset="0">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="PushButton" name="pushButton_121">
+       <property name="text">
+        <string>对照文本</string>
+       </property>
+       <property name="hasIcon" stdset="0">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="PushButton" name="pushButton_mp3">
        <property name="text">
         <string>下载音频</string>
        </property>
@@ -45,212 +72,113 @@
      </item>
     </layout>
    </item>
-   <item row="0" column="0">
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <widget class="TitleLabel" name="TitleLabel">
-       <property name="text">
-        <string>请输入要生草的内容：</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="0" column="2">
-      <widget class="PushButton" name="PushButton_ctrl_v">
-       <property name="text">
-        <string>一键粘贴</string>
-       </property>
-       <property name="hasIcon" stdset="0">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-    </layout>
+   <item row="4" column="0">
+    <widget class="TableWidget" name="tableWidget">
+     <attribute name="horizontalHeaderCascadingSectionResizes">
+      <bool>true</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>源文本</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>生草文本</string>
+      </property>
+     </column>
+    </widget>
    </item>
    <item row="1" column="0">
-    <widget class="PlainTextEdit" name="PlainTextEdit_input"/>
-   </item>
-   <item row="2" column="0">
     <layout class="QGridLayout" name="gridLayout_5">
-     <item row="0" column="0">
-      <layout class="QGridLayout" name="gridLayout_4">
-       <item row="0" column="0">
-        <layout class="QGridLayout" name="gridLayout_2">
-         <item row="0" column="3">
-          <widget class="SpinBox" name="SpinBox_timeout">
-           <property name="value">
-            <number>5</number>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="SubtitleLabel" name="SubtitleLabel_2">
-           <property name="text">
-            <string>超时：</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="SpinBox" name="SpinBox_times"/>
-         </item>
-         <item row="0" column="0">
-          <widget class="SubtitleLabel" name="SubtitleLabel">
-           <property name="text">
-            <string>翻译次数：</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="4">
-          <widget class="SubtitleLabel" name="SubtitleLabel_4">
-           <property name="text">
-            <string>重试次数：</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="5">
-          <widget class="SpinBox" name="SpinBox_retry">
-           <property name="value">
-            <number>5</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="0">
-        <layout class="QGridLayout" name="gridLayout_3">
-         <item row="0" column="0">
-          <widget class="RadioButton" name="RadioButton_together">
-           <property name="text">
-            <string>整体翻译</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="RadioButton" name="RadioButton_sentences">
-           <property name="text">
-            <string>逐句翻译</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <spacer name="horizontalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </item>
-     <item row="0" column="1">
-      <spacer name="horizontalSpacer_3">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="0" column="2">
-      <widget class="PrimaryPushButton" name="PrimaryPushButton_start">
-       <property name="text">
-        <string>开始翻译</string>
-       </property>
-       <property name="hasIcon" stdset="0">
-        <bool>true</bool>
+     <item row="0" column="0" rowspan="2">
+      <widget class="PlainTextEdit" name="plainTextEdit">
+       <property name="placeholderText">
+        <string>在此输入文本...</string>
        </property>
       </widget>
      </item>
-    </layout>
-   </item>
-   <item row="3" column="0">
-    <layout class="QGridLayout" name="gridLayout_11">
-     <item row="0" column="0">
-      <layout class="QGridLayout" name="gridLayout_10">
+     <item row="0" column="1">
+      <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
-        <layout class="QGridLayout" name="gridLayout_6">
-         <item row="0" column="1">
-          <widget class="TitleLabel" name="TitleLabel_4">
-           <property name="text">
-            <string>生草结果：</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="ProgressBar" name="ProgressBar">
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-             <bold>false</bold>
-            </font>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        <widget class="BodyLabel" name="BodyLabel_4">
+         <property name="text">
+          <string>分隔符</string>
+         </property>
+        </widget>
        </item>
-       <item row="1" column="0">
-        <layout class="QGridLayout" name="gridLayout_7">
-         <item row="0" column="2">
-          <widget class="SubtitleLabel" name="SubtitleLabel_timer">
-           <property name="text">
-            <string>用时 00:00:00.00</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <spacer name="horizontalSpacer_4">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="0" column="0">
-          <widget class="TransparentPushButton" name="TransparentPushButton_info">
-           <property name="text">
-            <string>未翻译</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+       <item row="0" column="1">
+        <widget class="LineEdit" name="lineEdit_sep">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="PushButton" name="pushButton_manage">
+         <property name="text">
+          <string>组织文本</string>
+         </property>
+         <property name="hasIcon" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
-     <item row="0" column="1">
-      <widget class="ImageLabel" name="ImageLabel"/>
+     <item row="1" column="1">
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <widget class="BodyLabel" name="BodyLabel">
+         <property name="text">
+          <string>翻译次数</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="SpinBox" name="spinBox_times"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="BodyLabel" name="BodyLabel_2">
+         <property name="text">
+          <string>超时/s</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="BodyLabel" name="BodyLabel_3">
+         <property name="text">
+          <string>重试次数</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="SpinBox" name="spinBox_retry">
+         <property name="value">
+          <number>5</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="DoubleSpinBox" name="doubleSpinBox_timeout">
+         <property name="value">
+          <double>5.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
+   </item>
+   <item row="0" column="0">
+    <widget class="TitleLabel" name="TitleLabel">
+     <property name="text">
+      <string>生草主页</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
@@ -266,17 +194,7 @@
    <header>qfluentwidgets</header>
   </customwidget>
   <customwidget>
-   <class>RadioButton</class>
-   <extends>QRadioButton</extends>
-   <header>qfluentwidgets</header>
-  </customwidget>
-  <customwidget>
-   <class>TransparentPushButton</class>
-   <extends>PushButton</extends>
-   <header>qfluentwidgets</header>
-  </customwidget>
-  <customwidget>
-   <class>SubtitleLabel</class>
+   <class>BodyLabel</class>
    <extends>QLabel</extends>
    <header>qfluentwidgets</header>
   </customwidget>
@@ -286,13 +204,13 @@
    <header>qfluentwidgets</header>
   </customwidget>
   <customwidget>
-   <class>ImageLabel</class>
-   <extends>QLabel</extends>
+   <class>ProgressBar</class>
+   <extends>QProgressBar</extends>
    <header>qfluentwidgets</header>
   </customwidget>
   <customwidget>
-   <class>ProgressBar</class>
-   <extends>QProgressBar</extends>
+   <class>LineEdit</class>
+   <extends>QLineEdit</extends>
    <header>qfluentwidgets</header>
   </customwidget>
   <customwidget>
@@ -303,6 +221,16 @@
   <customwidget>
    <class>SpinBox</class>
    <extends>QSpinBox</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>DoubleSpinBox</class>
+   <extends>QDoubleSpinBox</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>TableWidget</class>
+   <extends>QTableWidget</extends>
    <header>qfluentwidgets</header>
   </customwidget>
  </customwidgets>

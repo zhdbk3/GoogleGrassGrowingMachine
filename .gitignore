@@ -36,7 +36,7 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit test / coverage reports
+# Unit examples / coverage reports
 htmlcov/
 .tox/
 .nox/
@@ -159,8 +159,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
 
-# 本项目专属
-.github/workflows/action.yml
-错误日志.txt
-test/end.txt
-谷歌生草机-20231125
+# 本项目
+GoogleTranslateIpCheck/
+data/

@@ -1,3 +1,0 @@
-google_trans_new
-requests
-tqdm

@@ -1,4 +1,4 @@
-name: 打包谷歌生草机GUI
+name: 打包谷歌生草机
 
 on:
   workflow_dispatch:
@@ -9,10 +9,6 @@ on:
       version_str:
         description: '版本字符串'
         required: true
-      disable_console:
-        description: '禁用控制台'
-        required: true
-        default: true
 
 jobs:
   build:
@@ -37,8 +33,7 @@ jobs:
 
       - name: 安装依赖项
         run: |
-          pip install -r requirements.txt
-          pip install imageio
+          pip install -r requirements.txt imageio
 
       - name: 构建可执行文件
         uses: Nuitka/Nuitka-Action@main
@@ -46,21 +41,18 @@ jobs:
           nuitka-version: main
           script-name: src/main.py
           standalone: true
-          enable-plugins: pyside6
           #disable-plugins: options-nanny
           nofollow-import-to: Pillow,PIL,numpy
           output-file: GoogleGrassGrowingMachine
-          disable-console: ${{ github.event.inputs.disable_console }}
           company-name: 谷歌生草机开发组
           product-name: 谷歌生草机
           file-version: ${{ github.event.inputs.version_tuple }}
           product-version: ${{ github.event.inputs.version_tuple }}
           file-description: 谷歌生草机
           copyright: "Copyright 谷歌生草机开发组. All right reserved."
-          windows-icon-from-ico: src/img/icon.ico
-          macos-create-app-bundle: ${{ github.event.inputs.disable_console }}
-          macos-app-icon: src/img/icon.ico
-          linux-icon: src/img/icon.ico
+          windows-icon-from-ico: assets/icon.ico
+          macos-app-icon: assets/icon.ico
+          linux-icon: assets/icon.ico
 
       - name: 上传工件
         uses: actions/upload-artifact@v3
