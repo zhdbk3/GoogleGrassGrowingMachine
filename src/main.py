@@ -9,6 +9,7 @@ from PyQt5.QtGui import QIcon
 from qfluentwidgets import FluentWindow, FluentIcon, FluentTranslator
 
 import interfaces
+import qrc_img
 
 __version__ = '4.0.0-pre2'
 
@@ -17,7 +18,7 @@ class WindowGGGM(FluentWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle(f'谷歌生草机 {__version__}')
-        self.setWindowIcon(QIcon('../assets/icon.ico'))
+        self.setWindowIcon(QIcon(':/icon.png'))
         self.resize(800, 600)
 
         # 创建数据文件

@@ -53,6 +53,9 @@ jobs:
           windows-icon-from-ico: assets/icon.ico
           macos-app-icon: assets/icon.ico
           linux-icon: assets/icon.ico
+          enable-plugins: pyqt5
+          disable-console: true
+          macos-create-app-bundle: true
 
       - name: 上传工件
         uses: actions/upload-artifact@v3
