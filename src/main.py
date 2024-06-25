@@ -6,10 +6,10 @@ from types import TracebackType
 
 from PyQt5.QtWidgets import QApplication, QMessageBox
 from PyQt5.QtGui import QIcon
-from qfluentwidgets import FluentWindow, FluentIcon, FluentTranslator
+from qfluentwidgets import FluentWindow, FluentIcon, FluentTranslator, NavigationItemPosition
 
 import interfaces
-import qrc_img
+import img.qrc_img
 
 __version__ = '4.0.0-pre2'
 
@@ -33,7 +33,9 @@ class WindowGGGM(FluentWindow):
         self.interface_ip_check = interfaces.InterfaceIpCheck(self)
         self.addSubInterface(self.interface_ip_check, FluentIcon.SEARCH_MIRROR, 'GoogleTranslateIpCheck')
         self.interface_settings = interfaces.InterfaceSettings(self)
-        self.addSubInterface(self.interface_settings, FluentIcon.SETTING, '设置')
+        self.addSubInterface(self.interface_settings, FluentIcon.SETTING, '设置', NavigationItemPosition.BOTTOM)
+        self.interface_about = interfaces.InterfaceAbout(self)
+        self.addSubInterface(self.interface_about, FluentIcon.INFO, '关于与帮助', NavigationItemPosition.BOTTOM)
 
         # 自己处理报错
         sys.excepthook = self.excepthook

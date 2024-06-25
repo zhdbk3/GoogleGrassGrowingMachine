@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/">
+    <file>icon.png</file>
+    <file>MC着火的冰块.png</file>
+    <file>薛定谔的按钮.png</file>
+    <file>thun888.png</file>
+  </qresource>
+</RCC>

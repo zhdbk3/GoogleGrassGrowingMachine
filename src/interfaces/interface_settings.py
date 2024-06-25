@@ -6,7 +6,7 @@ from .ui_settings import Ui_FormSettings
 
 
 class InterfaceSettings(QWidget, Ui_FormSettings):
-    def __init__(self, parent=None):
+    def __init__(self, parent):
         super().__init__(parent)
         self.setupUi(self)
 
