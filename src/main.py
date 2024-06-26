@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import QApplication, QMessageBox
 from PyQt5.QtGui import QIcon
 from qfluentwidgets import FluentWindow, FluentIcon, FluentTranslator, NavigationItemPosition
 
+import lang_zh_cn  # 必须放在`import interfaces`之前
 import interfaces
 import img.qrc_img
 
