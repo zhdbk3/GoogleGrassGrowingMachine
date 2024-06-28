@@ -12,7 +12,7 @@ import lang_zh_cn  # 必须放在`import interfaces`之前
 import interfaces
 import img.qrc_img
 
-__version__ = '4.0.0-pre2'
+__version__ = '4.0.0'
 
 
 class WindowGGGM(FluentWindow):
